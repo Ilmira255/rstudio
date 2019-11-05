@@ -1,3 +1,4 @@
+
 library("reshape2")
 library("dplyr")
 set.seed(42)
@@ -51,3 +52,4 @@ my_randomization <- final_dataset %>%
   mutate(my_treatment = runif(length(treatment)) <0.5)
 
 print(head(my_randomization$my_treatment))
+
