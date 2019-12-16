@@ -30,6 +30,6 @@ ggplot(data=data2, aes(x = year, y = World_emissions_CO2)) +
   xlab('Год') +
   ylab('Тонны СО2') +
   annotate("rect", xmin = 2000, xmax = 2014, ymin = 25000000, ymax = 38000000,  alpha = .2, color = 'red3', size = 0.1) +
-  annotate("text", x = 2007, y = 40000000, label = "Ðåçêîå ïîâûøåíèå", color = 'red3', size=5) +
+  annotate("text", x = 2007, y = 40000000, label = "Резкое повышение", color = 'red3', size=5) +
   theme_bw() 
 
