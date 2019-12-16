@@ -8,6 +8,7 @@ read.csv(raw_d)
 fileConn <- file("co2clean.csv")
 writeLines(raw_d, fileConn)
 close(fileConn)
+
 World_emissions_CO2 <- read.csv("co2clean.csv", skip=1)
 World_emissions_CO2 <- World_emissions_CO2[-c(23,44,46,70,91,102,119,134,155,203,265,274), ]
 World_emissions_CO2 <- World_emissions_CO2[ , -c(2,3,4)]
@@ -18,6 +19,7 @@ World_emissions_CO2 <- as.numeric(World_emissions_CO2)
 World_emissions_CO2 <- data.frame(World_emissions_CO2)
 year <- seq(1959,2020,1)
 data2 <- data.frame(year, World_emissions_CO2)
+
 palet = colorRampPalette(c("green","red")) 
 colors = palet(62)
 options(scipen = 999)
