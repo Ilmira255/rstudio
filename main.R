@@ -28,10 +28,10 @@ ggplot(data = data2, aes(x = year, y = World_emissions_CO2)) +
   geom_point(size = 2, shape = 15, color = colors) +
   geom_area(alpha = 0.5) +
   ggtitle("The dynamics of CO2 emissions in the world, 1960 - 2014",
-          subtitle = "Over the past 54 years emissions have increased significantly")+
+          subtitle = "Over the past 54 years emissions have increased significantly") +
   xlab("Year") +
   ylab("Tons of CO2") +
-  annotate("rect", xmin = 2000, xmax = 2014, ymin = 25000000, ymax = 38000000,  alpha = .2, color = 'red3', size = 0.1) +
-  annotate("text", x = 2007, y = 40000000, label = "Sharp increase", color = 'red3', size=5) +
+  annotate("rect", xmin = 2000, xmax = 2014, ymin = 25000000, ymax = 38000000,  alpha = .2, color = "red3", size = 0.1) +
+  annotate("text", x = 2007, y = 40000000, label = "Sharp increase", color = "red3", size = 5) +
   theme_bw()
 
