@@ -3,8 +3,8 @@ library("ggplot2")
 library("httr")
 library("downloader")
 
-download.file('http://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.PC?downloadformat=csv', dest = 'dataco21.zip', mode = 'wb')
-unzip(zipfile="dataco21.zip",exdir="./data")
+download.file("http://api.worldbank.org/v2/en/indicator/EN.ATM.CO2E.PC?downloadformat=csv", dest = "dataco21.zip", mode = "wb")
+unzip(zipfile = "dataco21.zip", exdir = "./data")
 setwd("C:/Users/Èëüìèðà/Documents/data")
 
 raw_d <- readChar("API_EN.ATM.CO2E.PC_DS2_en_csv_v2_566534.csv", file.info("API_EN.ATM.CO2E.PC_DS2_en_csv_v2_566534.csv")$size)
@@ -18,10 +18,10 @@ World_emissions_CO2 <- data.frame(World_emissions_CO2)
 
 year <- seq(1960,2014,1)
 data2 <- data.frame(year, World_emissions_CO2)
-palet=colorRampPalette(c("green","red")) 
-colors=palet(62)
+palet = colorRampPalette(c("green","red")) 
+colors = palet(62)
 options(scipen = 999)
-ggplot(data=data2, aes(x = year, y = World_emissions_CO2)) + 
+ggplot(data = data2, aes(x = year, y = World_emissions_CO2)) + 
   geom_line(color = "green", size = 2) +
   geom_point(size = 2, shape = 15, color = colors) +
   geom_area(alpha = 0.5) +
